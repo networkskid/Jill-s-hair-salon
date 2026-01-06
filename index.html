@@ -1,1 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jill’s Hair Salon</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fdf6f8;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #f4c2d7, #e6a8c7);
+            padding: 60px 20px;
+            text-align: center;
+            color: #2b2b2b;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: #2b2b2b;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f4c2d7;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: #2b2b2b;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .service-card h3 {
+            color: #e6a8c7;
+            margin-bottom: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .contact {
+            background-color: #2b2b2b;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Jill’s Hair Salon</h1>
+    <p>Where beauty, confidence & style come together ✨</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+        Jill’s Hair Salon is a modern, welcoming space dedicated to enhancing your natural beauty.
+        From precision cuts to luxury treatments, our stylists are passionate about helping you
+        look and feel your absolute best.
+    </p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-card">
+            <h3>Haircuts & Styling</h3>
+            <p>Women, men & kids cuts tailored to your style.</p>
+        </div>
+        <div class="service-card">
+            <h3>Colour & Highlights</h3>
+            <p>Balayage, highlights, full colour & toning.</p>
+        </div>
+        <div class="service-card">
+            <h3>Treatments</h3>
+            <p>Keratin, deep conditioning & scalp care.</p>
+        </div>
+        <div class="service-card">
+            <h3>Bridal & Events</h3>
+            <p>Special occasion hair that lasts all day.</p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>Our Work</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" onclick="openModal(this)">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035" onclick="openModal(this)">
+        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1" onclick="openModal(this)">
+        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f" onclick="openModal(this)">
+    </div>
+</section>
+
+<div class="contact" id="contact">
+    <h2 style="color:white;">Contact Us</h2>
+    <p>📍 123 Beauty Street, City</p>
+    <p>📞 071 234 5678</p>
+    <p>📧 bookings@jillshairsalon.com</p>
+</div>
+
+<footer>
+    <p>&copy; 2026 Jill’s Hair Salon. All rights reserved.</p>
+</footer>
+
+<!-- IMAGE MODAL -->
+<div class="modal" id="imgModal" onclick="closeModal()">
+    <img id="modalImg">
+</div>
+
+<script>
+function openModal(img) {
+    document.getElementById("modalImg").src = img.src;
+    document.getElementById("imgModal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
 
