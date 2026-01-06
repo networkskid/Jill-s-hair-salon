@@ -23,11 +23,6 @@
         header h1 {
             font-size: 48px;
             margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
-
-        header p {
-            font-size: 18px;
         }
 
         nav {
@@ -57,10 +52,9 @@
             text-align: center;
             margin-bottom: 40px;
             font-size: 32px;
-            color: #2b2b2b;
         }
 
-        .services {
+        .services, .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
@@ -76,13 +70,6 @@
 
         .service-card h3 {
             color: #e6a8c7;
-            margin-bottom: 10px;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
         }
 
         .gallery img {
@@ -103,10 +90,6 @@
             text-align: center;
         }
 
-        .contact p {
-            margin: 10px 0;
-        }
-
         footer {
             background-color: #1e1e1e;
             color: white;
@@ -114,7 +97,7 @@
             padding: 15px;
         }
 
-        /* MODAL */
+        /* Image modal */
         .modal {
             display: none;
             position: fixed;
@@ -128,6 +111,17 @@
             max-width: 90%;
             max-height: 90%;
             border-radius: 15px;
+        }
+
+        .book-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 30px;
+            background: #e6a8c7;
+            color: #2b2b2b;
+            font-weight: bold;
+            border-radius: 25px;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -143,6 +137,7 @@
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#gallery">Gallery</a>
+    <a href="#bookings">Bookings</a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -151,7 +146,7 @@
     <p style="text-align:center; max-width:700px; margin:auto;">
         Jill’s Hair Salon is a modern, welcoming space dedicated to enhancing your natural beauty.
         From precision cuts to luxury treatments, our stylists are passionate about helping you
-        look and feel your absolute best.
+        look and feel your best.
     </p>
 </section>
 
@@ -187,10 +182,38 @@
     </div>
 </section>
 
+<!-- ✅ BOOKINGS SECTION -->
+<section id="bookings">
+    <h2>Book an Appointment</h2>
+
+    <p style="text-align:center; max-width:700px; margin:auto;">
+        To book an appointment or make an enquiry, contact us directly:
+    </p>
+
+    <div style="text-align:center; margin-top:30px;">
+
+        <h3 style="color:#e6a8c7;">📞 Hair Stylist</h3>
+        <p style="font-size:20px; font-weight:bold;">
+            <a href="tel:0835121006" style="color:#2b2b2b; text-decoration:none;">
+                083 512 1006
+            </a>
+        </p>
+
+        <h3 style="color:#e6a8c7; margin-top:30px;">📞 Assistant</h3>
+        <p style="font-size:20px; font-weight:bold;">
+            <a href="tel:0662482497" style="color:#2b2b2b; text-decoration:none;">
+                066 248 2497
+            </a>
+        </p>
+
+        <a href="tel:0835121006" class="book-btn">Book Now</a>
+    </div>
+</section>
+
 <div class="contact" id="contact">
     <h2 style="color:white;">Contact Us</h2>
     <p>📍 123 Beauty Street, City</p>
-    <p>📞 071 234 5678</p>
+    <p>📞 083 512 1006 / 066 248 2497</p>
     <p>📧 bookings@jillshairsalon.com</p>
 </div>
 
@@ -216,4 +239,3 @@ function closeModal() {
 
 </body>
 </html>
-
